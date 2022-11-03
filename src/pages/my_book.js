@@ -1,8 +1,10 @@
 import HTMLFlipBook from "react-pageflip";
+import flipBook from "react-pageflip"
 import React from "react"
 import JSONdata from "../fourthpig.json"
 import mouse from "../static/images/mouse.png"
 import {useRef} from "react"
+import style from '../styles/Book.module.css'
 
 const PageCover = React.forwardRef((props, ref) => {
     return (
@@ -27,28 +29,25 @@ const PageCover = React.forwardRef((props, ref) => {
     );
   });
 
-  const prevButtonClick = () => {
-    this.flipBook.getPageFlip().flipPrev();
-  };
-export function MyBook(props) {
-/*   const book = useRef();
-  const chooseOption =(page_number)=> {
-    console.log("hello");
-    book.pageFlip.flipNext();
-  }; */
+  
 
+export function MyBook(props) {
+  const nextButtonClick = () => {
+    console.log(this);
+    this.flipBook.pageFlip().flipNext();
+  };
   return (
-    <HTMLFlipBook width={300} height={500} showCover={true} className="demo-book">
+    <HTMLFlipBook ref={(component) => (this.pageFlip = component)} width={300} height={500} showCover={true} className="demo-book">
       <PageCover>The Fourth Little Pig</PageCover>
       {JSONdata.story.pages.map((data) => (
       <div className="demoPage">
-        <p>Then,</p>
+        <p className={style.text}>Then,</p>
         {
-         data.text.map((lines) => (<p>{lines}</p>))} 
+         data.text.map((lines) => (<p className={style.text}>{lines}</p>))} 
         <img style={{height:100}} src={mouse}/>
         {data.option1[0]===""?null:
-        <><p>What should I do?</p>
-        <p>If I...</p><button>{data.option1[0]}</button><button>{data.option2[0]}</button></>
+        <><p className={style.text}>What should I do?</p>
+        <p className={style.text}>If I...</p><button  className={style.text}>{data.option1[0]}</button><button className={style.text}>{data.option2[0]}</button></>
       }
       </div>
       ))}
