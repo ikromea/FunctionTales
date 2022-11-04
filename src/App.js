@@ -4,7 +4,7 @@ import {Book} from "./pages/book.js"
 import {MyBook} from "./pages/my_book.js"
 import Home from "./pages/home.js"
 import { GoogleLogin, GoogleLogout  } from '@leecheuk/react-google-login';
-import  gapi  from 'gapi-script';
+import  {gapi}  from 'gapi-script';
 import {useEffect, useState} from 'react';
 
 function App() {
