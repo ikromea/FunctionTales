@@ -22,6 +22,6 @@ jobs:
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          server: ftp.funtiontales.domains.swarthmore.edu/public_html
+          server: ftp.funtiontales.domains.swarthmore.edu:21/public_html
           username: admin
           password: ${{ secrets.FTP_PASSWORD }}
