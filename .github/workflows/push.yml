@@ -1,17 +1,29 @@
-name: Publish Website
-on: 
-  push
+on:
+  push:
+    branches:
+      - master
+name:  Deploy website on push
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  web-deploy:
+    name:  Deploy
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v2.1.0
-      with:
-        fetch-depth: 2
-    - name: FTP-Deploy-Action
-    uses: SamKirkland/FTP-Deploy-Action@3.1.1
-    with:
-      ftp-server: ftp://ftp.funtiontales.domains.swarthmore.edu:21/public_html
-      ftp-username: admin
-      ftp-password: ${{ secrets.FTP_PASSWORD }}
+      - name:  Get latest code
+        uses: actions/checkout@v2
+
+      - name: Use Node.js 12
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: "16.14.0"
+
+      - name: Build Project
+        run: |
+          npm install
+          npm run build
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ftp.funtiontales.domains.swarthmore.edu/public_html
+          username: admin
+          password: ${{ secrets.FTP_PASSWORD }}
