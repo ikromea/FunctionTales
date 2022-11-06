@@ -25,3 +25,4 @@ jobs:
           server: ftp.funtiontales.domains.swarthmore.edu
           username: admin@funtiontales.domains.swarthmore.edu
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
