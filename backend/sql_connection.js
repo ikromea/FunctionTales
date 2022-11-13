@@ -1,11 +1,12 @@
 var mysql = require('mysql');
+require('dotenv').config();
 
 var con = mysql.createConnection({
-  host: '127.0.0.1',
-  user: 'cpses_fuxd2je8g3@localhost',
-  password:'',
-  port: 3306,
-  database:'funtiont_Stories'
+  host: process.env.DB_HOST, 
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  port: process.env.DB_PORT,
+  database: process.env.DB_NAME
 });
 
 con.connect(function(err) {
