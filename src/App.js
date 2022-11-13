@@ -37,12 +37,7 @@ function App() {
     <br />
     {profile ? (
         <div>
-            <img src={profile.imageUrl} alt="user image" />
-            <h3>User Logged in</h3>
-            <p>Name: {profile.name}</p>
-            <p>Email Address: {profile.email}</p>
-            <br />
-            <br />
+            <p>{profile.name}</p>
             <GoogleLogout clientId={clientId} buttonText="Log out" onLogoutSuccess={logOut} />
         </div>
     ) : (
