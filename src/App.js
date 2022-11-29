@@ -1,67 +1,27 @@
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import {Book} from "./pages/book.js"
-import {MyBook} from "./pages/my_book.js"
+import { BrowserRouter, Route, Routes,Router } from 'react-router-dom';
+import MyBook from "./pages/my_book.js"
+import Login from "./pages/login.js"
+import Register from "./utils/register.js"
+import Reset from "./utils/register.js"
+import Dashboard from "./utils/dashboard.js"
 import Home from "./pages/home.js"
-import { GoogleLogin, GoogleLogout  } from '@leecheuk/react-google-login';
-import  {gapi}  from 'gapi-script';
-import {useEffect, useState} from 'react';
 
 function App() {
-  const clientId = '920356221071-f98bql1bjuubsprqcruc9tsl82t3puog.apps.googleusercontent.com';
-  const [ profile, setProfile ] = useState([]);
-  useEffect(() => {
-      const initClient = () => {
-          gapi.client.init({
-              clientId: clientId,
-              scope: ''
-          });
-      };
-      gapi.load('client:auth2', initClient);
-  });
-
-  const onSuccess = (res) => {
-      setProfile(res.profileObj);
-  };
-
-  const onFailure = (err) => {
-      console.log('failed', err);
-  };
-
-  const logOut = () => {
-      setProfile(null);
-  };
   return (
-    <><div>
-    <br />
-    <br />
-    {profile ? (
-        <div>
-            <p>{profile.name}</p>
-            <GoogleLogout clientId={clientId} buttonText="Log out" onLogoutSuccess={logOut} />
-        </div>
-    ) : (
-        <GoogleLogin
-            clientId={clientId}
-            buttonText="Sign in with Google"
-            onSuccess={onSuccess}
-            onFailure={onFailure}
-            cookiePolicy={'single_host_origin'}
-            isSignedIn={true}
-        />
-    )}
-</div><BrowserRouter>
+<BrowserRouter>
         <Routes>
-          <Route path="/book" element={<Book />}>
-          </Route>
-          <Route path="/book2" element={<MyBook />}>
+          <Route path="/book" element={<MyBook />}>
           </Route>
           <Route path="/" element={<Home />}>
           </Route>
+          <Route path="/login" element={<Login />}>
+          </Route>
+          <Route exact path="/register" element={<Register />} />
+          <Route exact path="/reset" element={<Reset />} />
+          <Route exact path="/dashboard" element={<Dashboard />} />
         </Routes>
-      </BrowserRouter></>
-
-
+      </BrowserRouter>
   );
 }
 

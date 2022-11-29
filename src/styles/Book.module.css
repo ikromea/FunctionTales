@@ -1,3 +1,54 @@
 .text{
     font-family: 'Dosis' !important;
 }
+.ifDiv{
+    display: flex;
+    flex-direction: row;
+}
+.thenText{
+    font-family: 'Dosis' !important;
+    font-weight: bold;
+    color:#F97704;
+}
+.ifText{
+    font-family: 'Dosis' !important;
+    font-weight: bold;
+    color:#F97704;
+    margin-right: 10px;
+}
+.textBlock{
+    font-family: 'Dosis' !important;
+    padding-bottom: 100px;
+}
+.background{
+    background-color: #F97704;
+    min-height: 100%;
+}
+.page{
+    background-color: white;
+    border: black;
+    box-shadow: 10mm;
+    position:fixed;
+    justify-content: center;
+}
+.book{
+    margin:auto;
+}
+.buttonDiv{
+    margin:auto;
+    background-color: #F97704;
+    min-height: 150px;
+    justify-content: center;
+    justify-items: center;
+    
+}
+.cover{
+    background-color: aqua;
+    z-index:10;
+    color:white;
+}
+.trueCov{
+    background-color: aqua;
+    z-index:10;
+    color:white;
+}

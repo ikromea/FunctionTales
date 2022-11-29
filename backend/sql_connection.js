@@ -9,7 +9,14 @@ var con = mysql.createConnection({
   database: process.env.DB_NAME
 });
 
-con.connect(function(err) {
+const getJson = async() => {
+  try{
+  con.connect();
   if (err) throw err;
-  console.log("Connected :) !");
-});
+  con.query("SELECT * FROM StorieTable", function (err, result, fields) {
+    if (err) throw err;
+    console.log(result);
+    return result
+  }
+}
+}

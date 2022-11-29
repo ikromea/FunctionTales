@@ -18,7 +18,7 @@ const Home = () => {
           </p>
   
           <div className={styles.grid}>
-            <a href="/book2"  className={styles.card}>
+            <a href="/book"  className={styles.card}>
               <h2>The Fourth Little Pig &rarr;</h2>
             </a>
   
@@ -27,14 +27,14 @@ const Home = () => {
             </a>
   
             <a
-              href="/book2"
+              href="/book"
               className={styles.card}
             >
               <h2>Examples &rarr;</h2>
             </a>
   
             <a
-              href="/book2"
+              href="/book"
               className={styles.card}
             >
               <h2>Deploy &rarr;</h2>
