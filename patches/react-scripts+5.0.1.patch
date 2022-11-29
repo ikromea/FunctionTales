@@ -1,0 +1,17 @@
+diff --git a/node_modules/react-scripts/config/webpack.config.js b/node_modules/react-scripts/config/webpack.config.js
+index e465d8e..40ddd60 100644
+--- a/node_modules/react-scripts/config/webpack.config.js
++++ b/node_modules/react-scripts/config/webpack.config.js
+@@ -349,6 +349,12 @@ module.exports = function (webpackEnv) {
+     module: {
+       strictExportPresence: true,
+       rules: [
++        {
++          test: /\.m?js/,
++          resolve: {
++            fullySpecified: false,
++          },
++        },
+         // Handle node_modules packages that contain sourcemaps
+         shouldUseSourceMap && {
+           enforce: 'pre',
