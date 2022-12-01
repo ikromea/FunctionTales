@@ -1,13 +1,12 @@
 import HTMLFlipBook from "react-pageflip";
 import React from "react"
 import JSONdata from "../fourthpig.json"
-import mouse from "../static/images/mouse.png"
 import {useRef} from "react"
 import style from '../styles/Book.module.css'
 import { useEffect,useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
-import { auth, db, logout } from "../firebase.js";
+import { auth, db} from "../firebase.js";
 import { query, collection, getDocs, where } from "firebase/firestore";
 /* eslint-disable */
 
@@ -37,7 +36,7 @@ const PageCover = React.forwardRef((props, ref) => {
   
 
 export default function MyBook(props) {
-  const [user, loading, error] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
   const navigate = useNavigate();
   const book = useRef();
   const [name, setName] = useState("");

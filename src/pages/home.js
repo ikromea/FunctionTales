@@ -11,7 +11,7 @@ const Home = () => {
           <p className={styles.description}>
             Code you own adventure
           </p>
-          <img className={styles.mouse} src={mouse}/>
+          <img className={styles.mouse} src={mouse} alt="Mouse Logo"/>
   
           <p className={styles.description}>
             Chose your story

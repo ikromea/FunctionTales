@@ -5,7 +5,7 @@ import "../styles/Dashboard.css";
 import { auth, db, logout } from "../firebase.js";
 import { query, collection, getDocs, where } from "firebase/firestore";
 function Dashboard() {
-  const [user, loading, error] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
   const [name, setName] = useState("");
   const navigate = useNavigate();
   const fetchUserName = async () => {
@@ -23,6 +23,7 @@ function Dashboard() {
     if (loading) return;
     if (!user) return navigate("/login");
     fetchUserName();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, loading]);
   return (
     <div className="dashboard">
