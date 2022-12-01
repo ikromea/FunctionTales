@@ -42,7 +42,6 @@
       "last 1 safari version"
     ]
   },
-  "type": "module",
   "devDependencies": {
     "typescript": "^4.8.4"
   }
