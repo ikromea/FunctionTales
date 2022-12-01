@@ -1,6 +1,11 @@
-on:
-  push
 name:  Deploy website on push
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 jobs:
   web-deploy:
     name:  Deploy
