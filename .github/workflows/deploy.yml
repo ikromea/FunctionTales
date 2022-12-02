@@ -23,7 +23,7 @@ jobs:
         username: admin@funtiontales.domains.swarthmore.edu
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
-        local-dir: ./build
+        local-dir: ./build/
         server-dir: /public_html
         exclude: |
           **/.git*
