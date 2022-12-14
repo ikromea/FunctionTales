@@ -86,11 +86,6 @@ export default function MyBook(props) {
       :null);
       setLastPage(document.getElementById("lastpage-"+book.current.pageFlip().getCurrentPageIndex())?
       true:false);
-/*       console.log("main object",document.getElementById("lastpage-"+book.current?.pageFlip().getCurrentPageIndex()));
-      console.log("minus 1 obh",document.getElementById("lastpage-"+book.current?.pageFlip().getCurrentPageIndex()-1));
-      console.log("minus 1 pn", book.current.pageFlip().getCurrentPageIndex()-1);
-      console.log("pg num",book.current?.pageFlip().getCurrentPageIndex());
-      console.log(lastPage); */
       console.log(book.current.pageFlip().getCurrentPageIndex());
       }}>
         <PageCover>
