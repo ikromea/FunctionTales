@@ -9,137 +9,152 @@
                "text": ["We all know the story of the 3 little pigs,", "but did you know I am the fourth little pig? ","On the day where the big bad wolf came knocking at my brother's door",
                "I was reading a book and drinking lemonade","Then I heard, 'Little pig! Little pig! Let me in! Let me in!'",
                "Then I heard, 'No! No! No!  Not by the hairs on my chinny chin chin!'"],
-               "option1":["run to my next brother's house",29],
+               "option1":["run to my next brother's house",32],
                "option2": ["get more lemonade",6]
 
         },{
             "first_page": 6,
-            "last_page": 10,
+            "last_page": 11,
             "image": "hello",
-            "text": ["I went inside and got lemonade","I heard the wolf huff","and I heard the wolf puff","and the house of straw fell down","Oh no! Achoo! I am alergic to straw"],
-            "option1":["go to the doctors",11],
-            "option2": ["go get medicine from my next brother",29]
+            "text": ["I went inside and got lemonade","I heard the wolf huff","and I heard the wolf puff","and the house of straw fell down","Achoo!","I am alergic to straw"],
+            "option1":["go to the doctors",12],
+            "option2": ["go get medicine from my next brother",32]
         },{
-            "first_page": 11,
-            "last_page": 12,
+            "first_page": 12,
+            "last_page": 13,
            "image": "hello",
             "text": ["I run to the doctors","He gives me medicine"],
-            "option1":["tell him about the big bad wolf",13],
-            "option2": ["go warn my next brother",29]
+            "option1":["tell him about the big bad wolf",14],
+            "option2": ["go warn my next brother",32]
         },
         {
-            "first_page": 13,
-            "last_page": 15,
+            "first_page": 14,
+            "last_page": 19,
             "image": "hello",
-             "text": ["'Doctor I need to tell you'", "'The big bad wolf is on the run. He might come for you'","'Oh dear! We better call the police!'"],
+             "text": ["'Doctor I need to tell you'", "'The big bad wolf is on the run. He might come for you'","'Oh dear!'","' We need to warn our friends!'", "We call of our friends", "And all of our friends were safe"],
              "option1":["",0],
              "option2": ["",0]
          },
          {
-            "first_page": 16,
-            "last_page": 17,
-            "image": "hello",
-             "text": ["The police came fast","They said, 'Big Bad Wolf put your hands in the air'","The big bad wolf went to jail and the four little pigs lived happily ever after"],
-             "option1":["",0],
-             "option2": ["",0]
-         },
-         {
-            "first_page": 18,
-            "last_page": 23,
+            "first_page": 20,
+            "last_page": 25,
             "image": "hello",
              "text": ["I reach out my hoof. I grab his paw"," I ask, 'Wolf, why are you so bad","Wolf says, 'I am not bad at all'","I just moved in to a house down the street","I just was looking for friends, not something to eat!","I say, 'We can be friends if you promise to stop blowing down our houses'"],
-             "option1":["drink lemonade with you",61],
-             "option2": ["read you my favorite book",70]
+             "option1":["drink lemonade with you",76],
+             "option2": ["read you my favorite book",74]
          },
          {
-            "first_page": 24,
-            "last_page": 26,
+            "first_page": 26,
+            "last_page": 29,
             "image": "hello",
-             "text": ["I stick out my hoof","The big bad wolf falls to the ground","The wolf cries, 'Help!'"],
-             "option1":["help the wolf",18],
-             "option2": ["call for help",16]
+             "text": ["I stick out my hoof","The big bad wolf falls to the ground","Bam!","The wolf cries, 'Help!'"],
+             "option1":["help the wolf",20],
+             "option2": ["call for help",78]
          },
          {
-            "first_page": 27,
-            "last_page": 28,
+            "first_page": 30,
+            "last_page": 31,
             "image": "hello",
              "text": ["I say 'Two cups of lemonade please'","Then I see the big bad wolf running towards me"],
-             "option1":["trip the big bad wolf",18],
-             "option2": ["run to warn my brother",31]
+             "option1":["trip the big bad wolf",26],
+             "option2": ["run to warn my brother",32]
          },
          {
-            "first_page": 29,
-            "last_page": 30,
+            "first_page": 32,
+            "last_page": 33,
             "image": "hello",
              "text": ["Then, I run as fast as I can","until I see a lemonade stand"],
-             "option1":["stop for lemonade",27],
-             "option2": ["keep running",29]
+             "option1":["stop for lemonade",30],
+             "option2": ["keep running",34]
          },
          {
-            "first_page": 31,
-            "last_page": 35,
+            "first_page": 34,
+            "last_page": 39,
             "image": "hello",
-             "text": ["Then, I got to my brothers ","I got lemonade and new book","Just as I started to relax...","Then I heard, 'Little pig! Little pig! Let me in! Let me in!'","Then I heard, 'No! No! No!  Not by the hairs on my chinny chin chin!'"],
-             "option1":["run to my next brother's house",60],
-             "option2": ["finish my book",57]
+             "text": ["Then, I got to my brothers ","I got lemonade and new book","Just as I started to relax...","Then I heard, 'Little pig! Little pig! Let me in! Let me in!'","Then I heard, 'No! No! No!'", "'Not by the hairs on my chinny chin chin!'"],
+             "option1":["run to my next brother's house",64],
+             "option2": ["finish my book",62]
          },
          {
-            "first_page": 36,
-            "last_page": 41,
+            "first_page": 40,
+            "last_page": 45,
             "image": "hello",
              "text": ["My brother and I rebuilt his house","After I got lemonade and read my book","My 3rd brother ran through the door","The big bad wolf is on the loose. He just came to my house","He huffed and he puffed","My house did not fall down but he needs to be stoped"],
-             "option1":["think we should go to my third brother's house",60],
-             "option2": ["delay the wolf",42]
+             "option1":["think we should go to my third brother's house",64],
+             "option2": ["delay the wolf",46]
          },
          {
-            "first_page": 42,
-            "last_page": 48,
+            "first_page": 46,
+            "last_page": 53,
             "image": "hello",
-             "text": ["My brother and I put on our clown shoes","and our clown hair","and our clown noses","We walk to find the big bad wolf","I say, 'Mr. Wolf would you like to see our circus act?'","Mr. Wolf says, 'That sounds like a great way to spend my day'","We made the wolf laugh so hard he forgot about huffing and puffing"],
+             "text": ["My brother and I put on our clown shoes","and our clown hair","and our clown noses","We walk to find the big bad wolf","I say, 'Mr. Wolf would you like to see our circus act?'","Mr. Wolf says, 'That sounds like a great way to spend my day'","Honk!","We made the wolf laugh so hard he forgot about huffing and puffing"],
              "option1":["",0],
              "option2": ["",0]
          },
          {
-            "first_page": 49,
-            "last_page": 56,
+            "first_page": 54,
+            "last_page": 61,
             "image": "hello",
-             "text": ["We walk to wolf's house and knock on the door","'Knock, knock, knock'","I say, 'Wolf, we need to talk!'","Wolf answers the door in his PJs","I ask, 'Wolf, why are you so bad'","Wolf says, 'I am not bad at all'","I just moved in to a house down the street","I just was looking for friends, not something to eat!","I say, 'We can be friends if you promise to be nice'"],
-             "option1":["drink lemonade with you",61],
-             "option2": ["read you my favorite book",70]
+             "text": ["We walk to wolf's house","'Knock, knock, knock'","I say, 'Wolf, we need to talk!'","I ask, 'Wolf, why are you so bad'","Wolf says, 'I am not bad at all'","I just moved in to a house down the street","I just was looking for friends, not something to eat!","I say, 'We can be friends if you promise to be nice'"],
+             "option1":["drink lemonade with you",76],
+             "option2": ["read you my favorite book",74]
          },
          {
-            "first_page": 57,
-            "last_page": 59,
+            "first_page": 62,
+            "last_page": 63,
             "image": "hello",
-             "text": ["I just got to the end of the chapter when","BAM!","The house of sticks fell down"],
-             "option1":["help my brother rebuild his house",36],
-             "option2": ["go warn my next brother",60]
+             "text": ["I just got to the end of the chapter when","The house of sticks fell down"],
+             "option1":["help my brother rebuild his house",40],
+             "option2": ["go warn my next brother",64]
          },
          {
-            "first_page": 60,
-            "last_page": 60,
+            "first_page": 64,
+            "last_page": 65,
             "image": "hello",
-            "text": ["Brother 3"],
+            "text": ["I run to brother 3 for help", "He let me stay at his house"],
             "option1":["",0],
             "option2": ["",0]
             },
          {
-            "first_page": 61,
-            "last_page": 69,
+            "first_page": 66,
+            "last_page": 73,
             "image": "drinking lemonade",
-             "text": ["We walk to wolf's house and knock on the door","'Knock, knock, knock'","I say, 'Wolf, we need to talk!'","Wolf answers the door in his PJs","I ask, 'Wolf, why are you so bad'","Wolf says, 'I am not bad at all'","I just moved in to a house down the street","I just was looking for friends, not something to eat!","I say, 'We can be friends if you promise to be nice'"],
+             "text": ["We walk to wolf's house and knock on the door","'Knock, knock, knock'","I say, 'Wolf, we need to talk!'","I ask, 'Wolf, why are you so bad'","Wolf says, 'I am not bad at all'","I just moved in to a house down the street","I just was looking for friends, not something to eat!","I say, 'We can be friends if you promise to be nice'"],
              "option1":["",0],
              "option2": ["",0]
          },
          {
-            "first_page": 70,
-            "last_page": 70,
+            "first_page": 74,
+            "last_page": 75,
             "image": "reading book",
-             "text": ["and we lived happily ever after"],
+             "text": ["and we lived happily ever after", "The End"],
+             "option1":["",0],
+             "option2": ["",0]
+         },
+         {
+            "first_page": 76,
+            "last_page": 77,
+            "image": "drink lemonade",
+             "text": ["and we lived happily ever after", "The End"],
+             "option1":["",0],
+             "option2": ["",0]
+         },
+         {
+            "first_page": 78,
+            "last_page": 79,
+            "image": "hello",
+             "text": ["I call my mom for help","and we lived happily ever after"],
+             "option1":["",0],
+             "option2": ["",0]
+         },
+         {
+            "first_page": 80,
+            "last_page": 80,
+            "image": "hello",
+             "text": ["The End"],
              "option1":["",0],
              "option2": ["",0]
          }
-         
     ]
 
     }

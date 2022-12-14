@@ -12,7 +12,7 @@ import { query, collection, getDocs, where } from "firebase/firestore";
 
 const PageCover = React.forwardRef((props, ref) => {
     return (
-      <div style={{backgroundColor:"red",zIndex:"2"}} className="page page-cover" ref={ref} data-density="hard">
+      <div className="page page-cover" ref={ref} data-density="hard">
         <div style={{backgroundColor:"#35C6E9",zIndex:"2",minHeight:500}} className="page-content">
           <h2 style={{color:"white",marginLeft:50,fontWeight:"bold"}} >{props.children}</h2>
         </div>
@@ -42,6 +42,7 @@ export default function MyBook(props) {
   const [name, setName] = useState("");
   const[option1,setOption1] = React.useState(null);
   const[option2,setOption2] = React.useState(null);
+  const[lastPage,setLastPage]=React.useState(false);
   const fetchUserName = async () => {
     try {
       const q = query(collection(db, "users"), where("uid", "==", user?.uid));
@@ -58,9 +59,21 @@ export default function MyBook(props) {
     if (!user) return navigate("/login");
     fetchUserName();
   }, [user, loading]);
+/*   useEffect(() => {
+  const myBook = document.getElementById("myBook");
+  console.log(myBook);
+  console.log(book.current);
+  console.log(lastPage);
+  console.log(document.getElementById("lastpage-"+myBook?.current?.pageFlip().getCurrentPageIndex()));
+    if(lastPage){book.current.className = style.noFlip}
+    else{
+      book.current.className = style.book
+    }
+    console.log(book.current.className);
+}, [lastPage]); */
   return (
     <div className={style.background}>
-      <HTMLFlipBook drawShadow={true} width={300} height={500} showCover={true} className={style.book} ref={book} onFlip={() => {
+      <HTMLFlipBook id="myBook" drawShadow={true} width={300} height={500}showCover={true}  className={lastPage?style.noFlip:style.book} ref={book} onFlip={() => {
       setOption2(document.getElementById("button2-"+book.current.pageFlip().getCurrentPageIndex())?
       document.getElementById("button2-"+book.current.pageFlip().getCurrentPageIndex()).value:
       document.getElementById("button2-"+(book.current.pageFlip().getCurrentPageIndex()-1))?
@@ -71,10 +84,18 @@ export default function MyBook(props) {
       document.getElementById("button1-"+(book.current.pageFlip().getCurrentPageIndex()-1))?
       document.getElementById("button1-"+(book.current.pageFlip().getCurrentPageIndex()-1)).value
       :null);
+      setLastPage(document.getElementById("lastpage-"+book.current.pageFlip().getCurrentPageIndex())?
+      true:false);
+/*       console.log("main object",document.getElementById("lastpage-"+book.current?.pageFlip().getCurrentPageIndex()));
+      console.log("minus 1 obh",document.getElementById("lastpage-"+book.current?.pageFlip().getCurrentPageIndex()-1));
+      console.log("minus 1 pn", book.current.pageFlip().getCurrentPageIndex()-1);
+      console.log("pg num",book.current?.pageFlip().getCurrentPageIndex());
+      console.log(lastPage); */
+      console.log(book.current.pageFlip().getCurrentPageIndex());
       }}>
         <PageCover>
           <h2 style={{paddingTop:40,marginLeft:-25,textAlign:"center"}}>The Fourth Little Pig</h2>
-        <img style={{ minWidth:250,marginLeft:-25,marginTop:100,justifyContent:"center",display:"center" }} src={"/static/images/fourpigs/12.png"} />
+        <img style={{ minWidth:250,marginLeft:-25,marginTop:100,justifyContent:"center",display:"center" }} src={"/static/images/fourpigs/4.png"} />
 
         </PageCover>
         {JSONdata.story.pages.map((data) => (
@@ -87,12 +108,13 @@ export default function MyBook(props) {
               <p className={style.text}>{lines}</p>
               </div>
               <img style={{ minWidth:250,margin:"auto" }} src={"/static/images/fourpigs/"+ (data.first_page + i+1)+".png"} />
-              {i === data.text.length-1?
+              {i === data.text.length-1 && data.option1[0]!=""?
               <><p className={style.text}>What should I do?</p><div className={style.ifDiv}>
                 <p className={style.ifText}>If </p>
               <p className={style.text}> I...</p>
+              <option id={"lastpage-" + data.last_page} value={true}></option>
               </div></>
-                :null}
+                :<option id={"lastpage-" + data.last_page} value={true}></option>}
                 <><option id={"button1-" + data.last_page} value={data.option1} className={style.text}></option><option id={"button2-" + data.last_page} value={data.option2} className={style.text}></option></>
             </div>
           )))
@@ -100,8 +122,12 @@ export default function MyBook(props) {
         )}
       </HTMLFlipBook>
       <div className={style.buttonDiv}>
-      {option1!=null?
-      <div class="has-text-centered is-transparent"><button class="button" onClick={() => book.current.pageFlip().turnToPage(parseInt(option1.split(",")[1]))}>{option1.split(",")[0]}</button><button class="button" onClick={() => book.current.pageFlip().turnToPage(parseInt(option2.split(",")[1]))}>{option2.split(",")[0]}</button></div>:
+      {option1!=null?option1.split(",")[0]==""?<div className="has-text-centered is-transparent"><button className="button" onClick={() => {book.current.pageFlip().turnToPage(81);
+      setLastPage(document.getElementById("lastpage-"+parseInt(option1.split(",")[1]))?
+      true:false)}}>The End</button></div>:
+      <div className="has-text-centered is-transparent"><button className="button" onClick={() => {book.current.pageFlip().turnToPage(parseInt(option1.split(",")[1])+1);
+      setLastPage(document.getElementById("lastpage-"+parseInt(option1.split(",")[1]))?
+      true:false)}}>{option1.split(",")[0]}</button><button className="button" onClick={() => book.current.pageFlip().turnToPage(parseInt(option2.split(",")[1])+1)}>{option2.split(",")[0]}</button></div>:
       null}
       </div>
       </div>
